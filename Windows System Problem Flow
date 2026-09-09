@@ -1,0 +1,103 @@
+chkdsk C: /scan = check disk
+DISM /Online /Cleanup-Image /RestoreHealth = Repair Windows image
+sfc /scannow = Repair system files
+shutdown /r /t 0 = restrart pc 
+1.PC/Laptop won't power on
+-------------------------------	
+Possible Cause -Power adapter, battery, SMPS, RAM
+Resolution - Check power cable, adapter, battery, reseat RAM, test with another adapter
+
+2.Black screen	
+-----------------------------
+Possible Cause - Display driver, monitor, RAM, graphics card
+Resolution - Check monitor, press Win + Ctrl + Shift + B, restart Explorer, boot to Safe 
+             Mode,update/reinstall display driver
+3.Slow performance
+----------------------------
+Possible Cause - Low disk space, startup apps, malware
+Resolution - Disable startup apps, clean temporary files, scan for malware, upgrade SSD/RAM if needed
+
+4.Windows freezes
+--------------------------------
+Driver issue, corrupt system files, overheating	Run sfc /scannow, DISM, update drivers, check CPU temperature
+Possible Cause - Driver issue, corrupt system files, overheating
+Resolution - Run sfc /scannow, DISM, update drivers, check CPU temperature
+
+5.Blue Screen (BSOD)	
+-------------------------
+Possible Cause - Check error code, update drivers, run Windows Memory Diagnostic, chkdsk
+
+6.Automatic restart	
+---------------------------
+Possible Cause - Hardware issue, overheating, PSU
+Resolution - Check Event Viewer, CPU temperature, power supply
+
+7.No internet	
+-------------------------
+Possible Cause - IP/DNS issue, cable, Wi-Fi
+Resolution - Run ipconfig /release, ipconfig /renew, ipconfig /flushdns, restart router
+
+8.Cannot join domain
+-------------------------------
+DNS, Active Directory, time mismatch	Verify DNS, sync time, rejoin the domain
+Possible Cause - DNS, Active Directory, time mismatch
+Resolution - Verify DNS, sync time, rejoin the domain
+
+9.Login problem
+------------------------------------
+Password expired, account locked	
+Possible Cause - Unlock account in Active Directory
+Resolution -  reset password
+
+10.Printer not printing	
+--------------------------------------
+Possible Cause - Driver, spooler, network issue
+Resolution - Restart Print Spooler, reinstall printer, clear print queue
+
+11.Shared folder not accessible	Permissions
+-------------------------------------------------
+Possible Cause - permission issue
+Resolution - Check permissions, network connectivity, share settings
+
+12.USB not detected	Driver,
+------------------------------------------------------
+USB port	Try another port, reinstall USB drivers
+Possible Cause - Driver, USB port issue
+Resolution - Try another port, reinstall USB drivers
+
+13.Audio not working	
+Possible Cause - Driver, disabled device	Check playback device
+Resolution -   update audio driver
+
+15.Outlook not opening	Corrupt profile, add-ins	
+possible cause -  Corrupt profile, add-ins issue
+Resolution - Start in Safe Mode, create a new Outlook profile
+
+Run:
+
+sfc /scannow
+
+Run:
+
+DISM /Online /Cleanup-Image /RestoreHealth
+Install Windows and driver updates.
+If hardware is faulty, replace the affected component.
+Essential Windows commands for IT Support
+ipconfig /all
+ping google.com
+nslookup google.com
+tracert google.com
+netstat -ano
+systeminfo
+hostname
+whoami
+gpupdate /force
+gpresult /r
+chkdsk C: /scan = Checks the C: drive/file system for errors.
+sfc /scannow = scannig systemfile
+DISM /Online /Cleanup-Image /RestoreHealth =This one is very important for Windows troubleshooting.
+shutdown /r /t 0 = immediate showdown
+
+
+
+
