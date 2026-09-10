@@ -1,0 +1,34 @@
+win+r 
+cmd = open command promt
+control
+diskmgmt.msc = disk management
+sysdm.cpl = system perperties
+ncpa.cpl = nic cart show
+firewall.cpl = show firewall
+mrt = del harmfull file
+tpm = trusted platform module
+cleanmgr = choose c drive
+VBS = virtual base security 
+recent = computer speed 
+temp  = temporary  file del
+%temp%
+prefetch = westfile del
+tree = show all file
+taskmgr = task manager
+notepad = open notepad
+hdwwiz.cpl =  show device manager
+\  = show c drive file
+perfmom.msc = performance montor pc
+resmom = resource monitor
+calc = open calculater
+appwiz.cpl = install and change option
+gpedit.msc = local group polici editor
+win+prtscr = screen recording
+shell:startup = directly login this command 
+outlook /safe = outlook safemode 
+system.cpl = go domain login
+Ntdsutil.exe = window active directory database
+dxdiag = window processor check
+dhcpmgmt.msc = open dhcp page 
+Netplwoz - go the user logo
+shift+ctrl+win+b = Blue screen resolve
