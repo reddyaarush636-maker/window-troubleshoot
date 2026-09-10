@@ -32,3 +32,7 @@ dxdiag = window processor check
 dhcpmgmt.msc = open dhcp page 
 Netplwoz - go the user logo
 shift+ctrl+win+b = Blue screen resolve
+
+how to create user
+-------------------------
+lusrmgr.msc >  user > r.click > new user > passwd 
