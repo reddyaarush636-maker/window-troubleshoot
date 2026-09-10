@@ -1,0 +1,28 @@
+how to go  safe mode
+-------------------------------
+Windows + R > msconfig > enter > boot tab > minimal > apply >ok >  restart
+
+How to exit Safe Mode
+-------------------------------
+Windows + R > msconfig > enter > boot tab uncheck > apply >  ok > restart
+
+how to go startup setting 
+--------------------------------------
+(if pc is black screen how to go startup option )
+Ctrl + Alt + Delete → Power icon → hold Shift → Restart
+
+(If the Windows 10 screen is completely black, you can still enter Safe Mode using the Windows Recovery Environment)
+--------------------------------------------------------------------------------------------------------------------------
+Best method: Force Windows Recovery
+Turn off the PC completely
+Hold the Power button for about 10 seconds.
+Turn the PC ON.
+As soon as you see the Windows logo or spinning dots, hold the Power button again to turn it off.
+Repeat this 2–3 times.
+On the next startup, Windows should show:
+Preparing Automatic Repair → Diagnosing your PC
+Choose:
+Advanced options → Troubleshoot → Advanced options → Startup Settings → Restart
+After restart, press:
+4 = Safe Mode
+5 = Safe Mode with Networking
