@@ -195,6 +195,7 @@ Active Directory is Microsoft's directory service used to centrally manage users
 ----------------------------------------------------
 Answer:
 A domain is a centrally managed Windows network where users and computers are managed using Active Directory.
+win+R company.local
 
 26. What is a Domain Controller?
 ----------------------------------------------
