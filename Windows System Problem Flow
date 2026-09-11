@@ -1,4 +1,8 @@
+run as a adminstrator
+-----------------------------
 chkdsk C: /scan = check disk
+chkdsk  C: /f   = fix file error
+chkdsk  C:  /r  = find bad sector
 DISM /Online /Cleanup-Image /RestoreHealth = Repair Windows image
 sfc /scannow = Repair system files
 shutdown /r /t 0 = restrart pc 
