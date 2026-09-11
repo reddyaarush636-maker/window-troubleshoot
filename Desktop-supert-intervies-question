@@ -1,0 +1,281 @@
+1. What is Desktop Support?
+---------------------------------
+Answer:
+Desktop Support is the job of helping users with computer, operating system, software, printer, network, email, and hardware problems.
+
+Example:
+If a user's PC has no internet, printer is not working, or Windows is slow, Desktop Support investigates and fixes the problem.
+
+2. What will you do if a computer is not turning on?
+---------------------------------------------------------
+Answer:
+
+Check power cable.
+Check power socket/UPS.
+Check SMPS/power adapter.
+Check power button.
+Check whether any LED or beep is coming.
+Disconnect unnecessary USB devices.
+If hardware failure is suspected, escalate to hardware team.
+
+3. What will you do if the computer turns on but the screen is black?
+-----------------------------------------------------------------------------
+Answer:
+------------
+Check monitor power.
+Check HDMI/DisplayPort/VGA cable.
+Check monitor input/source.
+Try another cable or monitor.
+Check whether Windows is running.
+Try Ctrl + Alt + Del.
+Try Win + Ctrl + Shift + B to reset the graphics driver.
+If necessary, boot into Safe Mode and troubleshoot the display driver.
+
+4. What is IP address?
+-----------------------------------
+Answer:
+An IP address is a unique address used to identify a device on a network.
+cmd > ipconfig   = check ip add
+cmd > ipconfig /all = check ip all details 
+
+6. What is DHCP?
+------------------------
+Answer:
+DHCP automatically provides network information to a computer.
+
+It can provide:
+
+IP address
+Subnet mask
+Default gateway
+DNS server
+
+7. What is DNS?
+-----------------------------
+Answer:
+DNS converts a domain name into an IP address.
+cmd > nslookup google.com   = see google dns
+
+8. What will you do if a user has no internet?
+---------------------------------------------------
+>check pc valid ip = cmd > ipconfig
+>cmd - ping (pc ip)
+> ping <default-gateway>
+>ping 8.8.8.8    = check internet connectivity
+>ping google.com
+
+9. What is ipconfig /release and /renew?
+---------------------------------------------
+cmd > ipconfig /release = release the currennt dhcp ip
+cmd > ipconfig /renew   = request new ip 
+
+10. What is APIPA?
+-----------------------------------
+Answer:
+APIPA is an automatic IP address assigned by Windows when the computer cannot obtain an IP address from DHCP.
+
+11. What is ping?  full form = Packet Internet Groper
+---------------------------------
+Answer:
+ping checks whether a device is reachable over the network.
+
+12. What is tracert?
+----------------------------------------------------
+Answer:
+tracert shows the path packets take from your computer to a destination.
+cmd > tracert google.com
+
+13. What is Safe Mode?
+-----------------------------------------
+Answer:
+Safe Mode starts Windows with a minimal set of drivers and services.
+
+It is useful for troubleshooting:
+
+Driver problems
+Startup problems
+Software conflicts
+Malware
+Black-screen issues
+
+14. What is Device Manager?
+------------------------------------------------------------------
+Answer:
+Device Manager is used to view and manage hardware devices and their drivers.
+
+15. What is a driver?
+-----------------------------
+Answer:
+A driver is software that allows Windows to communicate with hardware.
+
+16. What will you do if a printer is not printing?
+-------------------------------------------------------
+Answer:
+
+Check printer power.
+Check USB/network connection.
+Check printer status.
+Check default printer.
+Check print queue.
+Restart Print Spooler.
+Check printer driver.
+Print a test page.
+If network printer, check IP connectivity.
+win+R services.msc  > print spooler > restart >
+
+17. What is Print Spooler?
+-------------------------------------------------------------------
+Answer:
+Print Spooler is a Windows service that manages print jobs between the computer and printer.
+If printing is stuck, restarting the Print Spooler can sometimes resolve the issue.
+
+18. What is Task Manager?
+----------------------------------------------------------------
+Answer:
+Task Manager is used to monitor and manage running applications and system resources
+
+19. What will you do if a computer is very slow?
+------------------------------------------------------------
+Answer:
+
+I would check:
+
+CPU usage
+RAM usage
+Disk usage
+Running processes
+Startup applications
+Available disk space
+Windows updates
+Malware/security scan
+Event Viewer
+Hardware health
+
+20. What is Event Viewer?
+---------------------------------------------------------------
+Answer:
+Event Viewer stores Windows system and application logs.
+
+Open:
+
+win+r >eventvwr.msc
+
+We can investigate:
+
+Application errors
+System errors
+Login failures
+Driver problems
+Service 
+
+21. What is chkdsk?
+-------------------------------------
+Answer:
+chkdsk checks the file system and disk for errors.
+cmd  > chkdsk C: /scan
+
+22. What is SFC?
+----------------------------------
+Answer:
+SFC means System File Checker.
+It checks and repairs corrupted Windows system files.
+cmd > sfc /scannow
+
+23. What is DISM?
+---------------------------------
+Answer:
+DISM is used to repair the Windows component store and Windows image.
+
+24. What is Active Directory?
+----------------------------------------------
+Answer:
+Active Directory is Microsoft's directory service used to centrally manage users, computers, groups, and policies in a Windows domain environment.
+
+25. What is Domain?
+----------------------------------------------------
+Answer:
+A domain is a centrally managed Windows network where users and computers are managed using Active Directory.
+
+26. What is a Domain Controller?
+----------------------------------------------
+Answer:
+A Domain Controller is a server that manages Active Directory authentication and related domain services.
+
+27. What is Group Policy?
+-------------------------------------------------
+Answer:
+Group Policy allows administrators to centrally apply settings to users and computers.
+
+28. What is gpresult?
+------------------------------
+Answer:
+gpresult shows which Group Policies are applied to a computer/user.
+win+r > gpresult /r
+
+29. What is Remote Desktop?
+----------------------------------------------
+Answer:
+Remote Desktop allows an administrator/support engineer to remotely access another Windows computer.
+win+R  > mstsc
+
+30. What is VPN?
+-------------------------------
+Answer:
+VPN creates a secure connection between a user's computer and a private/company network over the internet.
+
+
+31. User says: "My internet is not working." What will you do?
+------------------------------------------------------------------
+First, I will understand whether the issue is only with that user's PC or multiple users
+Then I will check the network cable/Wi-Fi, IP configuration using ipconfig
+connectivity to the gateway using ping
+internet connectivity using ping 8.8.8.8
+and DNS using nslookup
+Based on the result, I will troubleshoot or escalate the issue.
+
+33. User says Outlook is not opening.
+----------------------------------------------
+Answer:
+
+Check whether Outlook process is running.
+Restart Outlook.
+Check network connectivity.
+Check mailbox/storage.
+Try Safe Mode:
+outlook.exe /safe
+Check add-ins.
+Repair Microsoft 365/Office if required.
+Escalate if it is a server/account issue.
+
+35. What is the difference between NTFS permission and Share permission?
+-------------------------------------------------------------------------------
+Simple answer:
+
+NTFS permission → applies to files/folders on an NTFS drive.
+
+Share permission → applies when accessing a folder through a network share.
+
+For network access, both can affect the final access level.
+
+desktop-engineer importand command
+-----------------------------------------
+ipconfig /all
+ipconfig /release
+ipconfig /renew
+ping
+tracert
+nslookup
+netstat -ano
+hostname
+whoami
+systeminfo
+gpupdate /force
+gpresult /r
+sfc /scannow
+DISM /Online /Cleanup-Image /RestoreHealth
+chkdsk C: /scan
+taskmgr
+services.msc
+devmgmt.msc
+eventvwr.msc
+mstsc
