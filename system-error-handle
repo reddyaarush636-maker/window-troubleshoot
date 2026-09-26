@@ -1,0 +1,101 @@
+network and serveradministrator mostly 50-70 error most learn
+
+
+| #  | Error / Problem                      | Area                | What you should learn              |
+| -- | ------------------------------------ | ------------------- | ---------------------------------- |
+| 1  | **RPC Server Unavailable – 1722**    | AD/Network          | DNS, firewall, RPC                 |
+| 2  | **Access Denied – 5**                | Windows             | Permissions                        |
+| 3  | **Network Path Not Found – 53**      | Network/SMB         | DNS, SMB, connectivity             |
+| 4  | **Logon Failure**                    | AD                  | Username, password, authentication |
+| 5  | **DNS Name Not Found**               | DNS                 | DNS records/configuration          |
+| 6  | **Duplicate IP**                     | Network             | IP conflict                        |
+| 7  | **IP Address 169.254.x.x**           | DHCP                | DHCP failure                       |
+| 8  | **Destination Host Unreachable**     | Network             | Routing/connectivity               |
+| 9  | **Request Timed Out**                | Network             | Firewall, routing, host            |
+| 10 | **DNS Server Not Responding**        | DNS                 | DNS service/configuration          |
+| 11 | **Service Failed to Start – 1053**   | Windows             | Service/dependency                 |
+| 12 | **Dependency Service Failed – 1068** | Windows             | Service dependencies               |
+| 13 | **File Not Found – 2**               | Windows             | File/path                          |
+| 14 | **Path Not Found – 3**               | Windows             | Path/storage                       |
+| 15 | **Invalid Parameter – 87**           | Windows             | Command/configuration              |
+| 16 | **Windows Update errors**            | Windows             | Update service/logs                |
+| 17 | **Group Policy not applying**        | AD/GPO              | DNS, replication, GPO              |
+| 18 | **Computer cannot join domain**      | AD                  | DNS, credentials, time             |
+| 19 | **AD replication failure**           | AD                  | DNS, RPC, replication              |
+| 20 | **SYSVOL/NETLOGON problem**          | AD                  | DFSR, DNS, AD                      |
+| 21 | **Kerberos authentication failure**  | AD                  | Time/DNS/SPN                       |
+| 22 | **Time synchronization error**       | AD                  | NTP/W32Time                        |
+| 23 | **DHCP address not received**        | DHCP                | Scope, server, relay               |
+| 24 | **DHCP scope exhausted**             | DHCP                | Available addresses                |
+| 25 | **Cannot access shared folder**      | SMB                 | Permissions/share                  |
+| 26 | **SMB connection failure**           | File Server         | Firewall/SMB                       |
+| 27 | **Printer unavailable**              | Windows             | Spooler/network                    |
+| 28 | **Disk full**                        | Server              | Disk/log cleanup                   |
+| 29 | **High CPU**                         | Server              | Task Manager/Process               |
+| 30 | **High RAM usage**                   | Server              | Processes/memory                   |
+| 31 | **High disk usage**                  | Server              | Disk/process                       |
+| 32 | **Server cannot boot**               | Windows             | Boot/BCD/system                    |
+| 33 | **Blue Screen / BSOD**               | Windows             | Stop code/drivers                  |
+| 34 | **IIS 404**                          | IIS                 | Page/resource not found            |
+| 35 | **IIS 403**                          | IIS                 | Permission/access                  |
+| 36 | **IIS 500**                          | IIS                 | Application/server error           |
+| 37 | **IIS 503**                          | IIS                 | Application pool/service           |
+| 38 | **Certificate expired**              | Security            | Certificate                        |
+| 39 | **SSL/TLS error**                    | Security            | Certificate/TLS                    |
+| 40 | **Port already in use**              | Network/Application | `netstat`/process                  |
+
+
+For these problems, practice these commands heavily:
+----------------------------------------------------------- CMD
+ipconfig /all
+ping
+tracert
+pathping
+nslookup
+netstat -ano
+arp -a
+route print
+hostname
+systeminfo
+whoami
+gpupdate /force
+gpresult /r
+dcdiag
+repadmin
+
+win+r
+---------------
+eventvwr.msc
+services.msc
+compmgmt.msc
+perfmon.msc
+lusrmgr.msc
+dnsmgmt.msc
+dhcpmgmt.msc
+dsa.msc
+gpmc.msc
+
+
+. Network troubleshooting
+→ IP → subnet → gateway → DNS → DHCP → routing → firewall
+
+2. Windows Server
+→ Services → Event Viewer → disk → CPU/RAM → permissions
+
+3. DNS
+→ A record → PTR → CNAME → SRV → DNS troubleshooting
+
+4. Active Directory
+→ Domain join → ADUC → GPO → authentication → replication → SYSVOL
+
+5. DHCP
+→ Scope → lease → reservation → exclusion → DHCP relay
+
+6. File Server
+→ NTFS permissions → Share permissions → SMB
+
+7. IIS
+→ 401 → 403 → 404 → 500 → 502 → 503
+
+8. Advanced troubleshooting
+→ RPC → Kerberos → DFSR → certificates → clustering
