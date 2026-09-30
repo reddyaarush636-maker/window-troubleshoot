@@ -1,0 +1,17 @@
+get-windowsfeature = show all windows server feature
+get-Netipconfiguration  = show all server NIC cart show
+get-NetIPaddress   = show net ip address
+get-netadapter      =  show network adapter
+new-netipaddress -interfaceindex 2 192.168.10.1 -prefixlength 24 -defaultgateway 192.168.50.1  = set ip address
+set-dnsclientserveraddress -interfaceindex 2 -serveraddress  8.8.8.8 = DNS configure
+get-netipconfiguration
+rename-netadapter -name ethernet -newname demo  = change lan name
+disable-netadapter -ifalias demo    = disable NIC cart
+enable   "            "      "      = enable NIC cart
+get-windowsfeature -name *ad-domain*   = show domain name
+                         *DNS*
+install-windowsfeature -name AD-domain-services -includemanagementtool -restart = install adds
+test-ADDSforestinstallation -domainname abc.com      = check domain name
+     DRSM: admin@123
+  Reconfig: admin@1234
+            "y" : y
