@@ -16,7 +16,7 @@ PDC > ADC  > RODC > CDC
 
 >DATA DUBPLICATION 
 
->PRINT & DOCUMENT SERVISES
+>PRINT & DOCUMENT SERVISES =done 
 
 
 >WALL PAPER & SOFTWARE DEPLOY IN CLIEND MACHINE 
@@ -72,8 +72,35 @@ Practical part
   DC [192.168.0.20]                      WSUS SERVER[IP-192.168.0.30]               TEST CLIND [IP-192.168.0.40]
   DC SERVER CONFI
   create a OU > ou under create new ou >  clind machine r.click > move to CLIND WIN-10 OU UNDER OU MOVE 
+group policies 
+------------------
+DC server > group plocies > abc.com expand > default GPO > new GPO > NAME wsus policies
+edit > computer configuration > policies > administrator complex > window component 
+window update > configure automatic update > edit > enable > auto download and notify for install 
+apply > ok 
+ specify internet microsoft update service location > enable >1st box - http://pdc.abc.com:8530
+2nd box - http://pdc.abc.com:8530 > apply > ok
+
+link GPO WITH OU CLIEND 
+
 
 
 WSUS  SERVER CONFIG
 -------------------
-INSTALL window server update servises [select bydefauit] > 
+INSTALL window server update servises [select bydefauit] > put the location on store data
+install
+wsus configure 
+-----------------
+tool > WSUS > 
+open wsus > next > next > 
+untick policies statement 
+. synchronize from microsoft update
+netx> next > start connecting
+choose product > window server 2019 >
+security update > update > syn mannual 
+>tick - begin initial sysn > next 
+cmd > wuauclt /detectnow
+
+clind side 
+---------------------
+cmd > gpupdate /force 
